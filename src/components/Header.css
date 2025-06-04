@@ -1,0 +1,190 @@
+.header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  height: 80px; /* Increased height for toggle alignment */
+  transition: all 0.3s ease; /* Smooth transition for animation */
+}
+
+/* Header style when scrolled */
+.header-scrolled {
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  height: 60px; /* Smaller height on scroll */
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 100px;
+  position: relative;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.nav-container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  padding-right: 50px; /* Shift nav links a bit more to the left to balance toggle */
+}
+
+.toggle-container {
+  flex: 0 0 auto;
+}
+
+.toggle-switch {
+  width: 60px;
+  height: 34px;
+  background: #e0e0e0;
+  border-radius: 34px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.toggle-switch:hover {
+  background: #d5d5d5;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
+}
+
+.toggle-thumb {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(145deg, #ffffff, #d1d1d1);
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.toggle-thumb::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #6b6b6b, #a0a0a0);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.toggle-switch.light {
+  background: #e0e0e0;
+}
+
+.toggle-switch.light:hover {
+  background: #d5d5d5;
+}
+
+.toggle-switch.dark {
+  background: #4a4a4a;
+}
+
+.toggle-switch.dark:hover {
+  background: #3a3a3a;
+}
+
+.toggle-switch.light .toggle-thumb {
+  transform: translateX(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-switch.dark .toggle-thumb {
+  transform: translateX(26px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Remove decorative elements */
+.clouds,
+.cloud,
+.cloud1,
+.cloud2,
+.moon,
+.stars,
+.star,
+.star1,
+.star2,
+.star3,
+.star4,
+.star5 {
+  display: none !important;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0 auto; /* Center nav links horizontally */
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  border-bottom: 2px solid #000000;
+  color: #000000;
+}
+
+.join-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.join-btn:hover {
+  background-color: #333333;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #000000;
+  transition: color 0.3s ease;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.dark-mode-toggle:hover {
+  color: #555555;
+}

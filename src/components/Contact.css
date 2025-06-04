@@ -1,0 +1,131 @@
+.contact-section {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.input-error {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.submit-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 30px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(101, 41, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  font-size: 1rem;
+  align-self: flex-start;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.submit-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.submit-btn:hover {
+  box-shadow: 0 0 20px rgba(101, 41, 255, 0.8);
+  transform: scale(1.1);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(101, 41, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(101, 41, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(101, 41, 255, 0.8);
+  }
+}
+
+.thank-you-message {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #28a745;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.contact-social-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(101, 41, 255, 0.4);
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(101, 41, 255, 0.7);
+}

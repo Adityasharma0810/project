@@ -1,0 +1,35 @@
+.join-us-section {
+  padding: 2rem 0;
+  background-color: #e6f7ff;
+  text-align: center;
+}
+
+.join-us-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.join-us-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #0056b3;
+}
