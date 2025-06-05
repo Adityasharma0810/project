@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "admin-app/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/admin-app/$1" }
+  ]
+}
