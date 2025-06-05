@@ -8,5 +8,9 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/admin-app/$1" }
-  ]
+  ],
+  "build": {
+    "env": {},
+    "command": "cd admin-app && npm run build"
+  }
 }
